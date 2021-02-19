@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey</title>
+</head>
+<body>
+<h1>Survey</h1>
+<form method="post" action="summary">
+
+    <div class="form-group">
+        <label>Name:
+            <input type="text" name ="food" value="{{ @userFood }}">
+            <check if="{{ isset(@errors['food']) }}">
+                {{ @errors['food'] }}
+            </check>
+        </label>
+    </div>
+
+    <check if="{{ @errors['conds'] }}"><span>{{ @errors['conds'] }}</span></check>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Check all that apply</label>
+        <div class="col-sm-4">
+            <div class="col-sm-4">
+                <repeat group="{{ @condiments }}" value="{{ @condiment }}">
+                    <label><input type="checkbox"
+                                  value="{{ @condiment }}"> {{ ucfirst(@condiment) }}</label><br>
+                </repeat>
+            </div>
+        </div>
+    </div>
+
+    <input type="submit" value="Next >>">
+
+</form>
+</body>
+</html>
