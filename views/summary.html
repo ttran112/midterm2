@@ -1,21 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+
+
 <include href="views/header.html"></include>
 
 <body>
 
 <h1>SUMMARY</h1>
 
-<h3>You ordered {{ @SESSION.food }}</h3>
-<h3>Condiments: {{ @SESSION.conds}}</h3>
-<a href="SURVEY">Place another order</a>
+<h3>Your name {{ @SESSION.food }}</h3>
+<h3>Difficult: {{ @SESSION.conds}}</h3>
+<a href="survey">survey</a>
 <a href="{{@BASE}}">Home Page</a>
 </body>
 
-</body>
+
 </html>

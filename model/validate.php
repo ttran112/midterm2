@@ -19,14 +19,11 @@ function validFood($food)
         return false;
     */
 
-    return !empty($food) && ctype_alpha($food);
+    //return !empty($food) && ctype_alpha($food);
+    return !empty($food);
 }
 /** validMeal() returns true if the selected meal is in the list of valid options */
-function validMeal($meal)
-{
-    $validMeals = getMeals();
-    return in_array($meal, $validMeals);
-}
+
 
 function validCondiment($selectedConds) {
     $validConds = getCondiments();
